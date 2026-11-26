@@ -415,15 +415,15 @@ class ScheduledJobInfo:
             Whether multiple instances of this Job can run concurrently.
         status (`ScheduledJobStatus` or `None`):
             Status of the scheduled Job.
-        owner: (`JobOwner` or `None`):
+        owner (`JobOwner` or `None`):
             Owner of the scheduled Job, e.g. `JobOwner(id="5e9ecfc04957053f60648a3e", name="lhoestq", type="user")`
-        job_spec: (`JobSpec` or `None`):
+        job_spec (`JobSpec` or `None`):
             Specifications of the Job.
 
     Example:
 
     ```python
-    >>> from huggingface_hub import run_job
+    >>> from huggingface_hub import create_scheduled_job
     >>> scheduled_job = create_scheduled_job(
     ...     image="python:3.12",
     ...     command=["python", "-c", "print('Hello from the cloud!')"],
